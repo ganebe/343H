@@ -1,10 +1,11 @@
 #ifndef ACTION_H
 #define ACTION_H
+#include <string>
 #include "inventory.h"
 #include "customer.h"
 #include "hashtable.h"
 #include "moviefactory.h"
-
+using namespace std;
 // ------------------------------------------------Action.h -------------------------------------------------------
 // CSS 343 B Au 23
 // Created on 11/17/2023
@@ -48,6 +49,13 @@ void Inventory();
 //  outputs all the transactions of a customer if the customer does exist
 //-------------------------------------------------------------------------
 void History(int customer_id);
+
+
+//------------------------- addNewMovie ---------------------------------
+// create and add the new movie to the inventory
+// return true if movie was sucessfully added, otherwise return false
+//-------------------------------------------------------------------------
+bool addNewMovie(string type);
 
 private:
 
