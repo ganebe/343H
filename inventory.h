@@ -26,12 +26,12 @@ Inventory(); // deafault constructor
 //------------------------- setReturn ---------------------------------
 // borrow a movie from the inventory
 //-------------------------------------------------------------------------
-void setBorrow(Movie&);
+bool setBorrow(Movie&);
 
 //------------------------- setReturn ---------------------------------
 // return a movie to the inventory
 //-------------------------------------------------------------------------
-void setReturn(Movie&);
+bool setReturn(Movie&);
 
 
 //------------------------- addMovie ---------------------------------
