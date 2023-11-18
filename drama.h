@@ -11,28 +11,25 @@
 #pragma once
 #ifndef DRAMA_H
 #define DRAMA_H
+#include "movie.h"
 #include <string>
 #include <vector>
 
 using namespace std;
 
-class Drama
+class Drama:Movie
 {
 
 public:
 	//Constructors
 	Drama();
-	Drama(char genre, int stock, string director, string title, int releaseYear);
+	Drama(int stock, string director, string title, int releaseYear);
 
 	//Destructor
 	~Drama();
 	
 	//getters
-	string getDirector() const;
-	string getTitle() const;
 	int getReleaseYear() const;
-	int getStock() const;
-	char getGenre() const;
 
 	//Overloads
 	bool operator<(const Drama& other) const;
@@ -41,11 +38,6 @@ public:
 	bool operator!=(const Drama& other) const;
 
 private:
-	int stock;
-	string director;
-	string title;
 	int releaseYear;
-	char genre;
-
 };
 #endif

@@ -7,17 +7,14 @@ using namespace std;
 
 class Movie {
 public:
-    Movie(char status, int stock, const string& director, const string& title, int year);
-    Movie(char status, int stock, const string& director, const string& title, const string& majorActorMonthYear);
+    Movie(int stock, const string& director, const string& title);
     virtual ~Movie() = default;
 
-    char getStatus() const;
     int getStock() const;
     void setStock(int stock);
+    int getCurrentStock()const;
     const string& getDirector() const;
     const string& getTitle() const;
-    const string getMajorActorMonthYear() const;
-    int getYear() const;
 
 
     // Borrow and return movie(Not sure if we need them here)
@@ -29,8 +26,8 @@ public:
     virtual bool operator!=(const Movie& other) const;
 
 private:
-    char status_;
-    int stock_, year_;
-    string director_, title_, majorActorMonthYear_;
+    int current_stock_;
+    int stock_;
+    string director_, title_;
 };
 #endif

@@ -12,30 +12,25 @@
 #pragma once
 #ifndef CLASSICS_H
 #define CLASSICS_H
+#include "movie.h"
 #include <string>
 #include <vector>
 
 using namespace std;
 
-class Classic
+class Classic:Movie
 {
 
 public:
 	//Constructors
 	Classic();
-	Classic(char genre, int stock, string director, string title,  string majorName, int releaseYear, int releaseMonth);
+	Classic(int stock, string director, string title,  string majorNameAndReleaseDate);
 
 	//Destructor
 	~Classic();
 
 	//getters
-	string getDirector() const;
-	string getTitle() const;
-	string getMajorName() const;
-	int getReleaseMonth() const;
-	int getReleaseYear() const;
-	int getStock() const;
-	char getGenre() const;
+	string getMajorNameAndReleaseDate() const;
 
 	//Overloads
 	bool operator<(const Classic& other) const;
@@ -44,13 +39,7 @@ public:
 	bool operator!=(const Classic& other) const;
 
 private:
-	int stock;
-	string director;
-	string title;
-	string majorName;
-	int releaseMonth;
-	int releaseYear;
-	char genre;
+	string majorNameAndReleaseDate;
 
 };
 #endif
