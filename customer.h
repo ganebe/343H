@@ -12,8 +12,8 @@ public:
     int getCustomerId() const;
     string getLastName() const;
     string getFirstName() const;
-    void addTransaction(dataVerifier* transaction);
-    const vector<dataVerifier*>& getTransactions() const;
+    void addTransaction(dataVerifier* data);
+    const vector<dataVerifier*>& getData() const;
     void displayHistory() const;
 
 private:
