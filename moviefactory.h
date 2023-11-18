@@ -1,5 +1,5 @@
-#ifndef ACTION_H
-#define ACTION_H
+#ifndef MOVIEFACTORY_H
+#define MOVIEFACTORY_H
 #include <string>
 #include "movie.h"
 #include "inventory.h"
@@ -21,11 +21,13 @@ class MovieFactory{
 public:
 
 MovieFactory(); // deafualt constructor
+
 //------------------------- createMovie ---------------------------------
 //Return a movie based on the string passed in, however
 // if the string is not vaild, it will return false with the bool parameter
 // and the movie it returns shouldn't be used 
 //-------------------------------------------------------------------------
+
 Movie& createMovie(string type, bool& sucess);
 
 private:

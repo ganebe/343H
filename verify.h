@@ -17,15 +17,10 @@ public:
 	//------------------------- check ---------------------------------
 	// Checks if the request is valid according to expected symbols
 	//-------------------------------------------------------------------------
-	static Verify *check(std::string identifier);
+	bool check(std::string identifier);
 
 private:
-	//------------------------- create ---------------------------------
-	// factory method creating instances of command subclasses
-	// (Borrow, Return, Inventory, History) based on the actionType,
-	// and it executes the command immediately after creation.
-	//-------------------------------------------------------------------------
-	static Verify *create(char actionType, Customer *cus, Movie *mov);
+
 };
 
 #endif

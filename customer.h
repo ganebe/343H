@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 #include<iostream>
-#include"dataVerifier.h"
 using namespace std;
 
 class Customer {
@@ -12,14 +11,13 @@ public:
     int getCustomerId() const;
     string getLastName() const;
     string getFirstName() const;
-    void addTransaction(dataVerifier* data);
-    const vector<dataVerifier*>& getData() const;
+    void addHistory(string data);
     void displayHistory() const;
 
 private:
     int customerId_;
     string lastName_;
     string firstName_;
-    Hash<int, Customer*> customers_;
+    vector<string> history();
 };
 #endif
