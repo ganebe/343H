@@ -23,7 +23,7 @@ class Action{
 
 public:
 Action(); //Default construction for the action, however there is no variables to initialize, so it basically doesn't do anything
-
+~Action();
 
 //------------------------- Borrow ---------------------------------
 //Return true when the movie requested has stock in the inventory
