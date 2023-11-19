@@ -23,7 +23,8 @@ public:
     // Comparison operators
     virtual bool operator==(const Movie& other) const;
     virtual bool operator!=(const Movie& other) const;
-
+	virtual bool operator<(const Drama& other) const;
+	virtual bool operator>(const Drama& other) const;
 private:
     int current_stock_;
     int stock_;
