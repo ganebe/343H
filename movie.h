@@ -17,9 +17,8 @@ public:
     const string& getTitle() const;
 
 
-    // Borrow and return movie(Not sure if we need them here)
-    virtual bool borrowMovie();
-    virtual bool returnMovie();
+    bool borrowMovie();
+    bool returnMovie();
 
     // Comparison operators
     virtual bool operator==(const Movie& other) const;
